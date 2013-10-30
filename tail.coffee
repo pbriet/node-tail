@@ -52,7 +52,7 @@ class Tail extends events.EventEmitter
           @internalDispatcher.emit("next") if @queue.length is 1
     else if e is 'rename'
       @unwatch()
-      setTimeout (=> @watch()), 1000
+      setTimeout (=> @watch()), 300
   
   watchFileEvent: (curr, prev) ->
     if curr.size > prev.size
